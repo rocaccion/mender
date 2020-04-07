@@ -20,13 +20,17 @@ import (
 	"path"
 )
 
+const usr_share_mender string = "/usr/share/mender"
+
+
+
 const (
 	BrokenArtifactSuffix = "_INCONSISTENT"
 )
 
 var (
 	// needed so that we can override it when testing
-	DefaultPathDataDir = "/usr/share/mender"
+	DefaultPathDataDir = usr_share_mender
 	DefaultDataStore   = "/var/lib/mender"
 	DefaultKeyFile     = "mender-agent.pem"
 
