@@ -21,8 +21,8 @@ import (
 	"io"
 	"os"
 	"path/filepath"
-
 	"golang.org/x/sys/unix"
+//	"github.com/mendersoftware/mender/conf"
 )
 
 type stat unix.Stat_t

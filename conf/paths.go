@@ -28,6 +28,16 @@ const (
 	BrokenArtifactSuffix = "_INCONSISTENT"
 )
 
+const (
+    DemoServerCertificate = "/usr/share/doc/mender-client/examples/demo.crt"
+)
+
+/*
+const (
+    MountInfo = "/proc/self/mountinfo"
+)
+*/
+
 var (
 	// needed so that we can override it when testing
 	DefaultPathDataDir = usr_share_mender
@@ -59,3 +69,13 @@ func GetStateDirPath() string {
 func GetConfDirPath() string {
 	return "/etc/mender"
 }
+
+func GetHostname() string {
+	return "/etc/hosthame"
+}
+
+func GetHosts() string {
+	return "/etc/hosts"
+}
+
+

@@ -92,7 +92,7 @@ const (
 	demoInventoryPoll     = 5
 	demoRetryPoll         = 30
 	demoUpdatePoll        = 5
-	demoServerCertificate = "/usr/share/doc/mender-client/examples/demo.crt"
+	demoServerCertificate = conf.DemoServerCertificate /* "/usr/share/doc/mender-client/examples/demo.crt" */
 	hostedMenderURL       = "https://hosted.mender.io"
 
 	// Prompt constants
@@ -159,7 +159,7 @@ func getDefaultDeviceType(ctx *cli.Context) (devType string) {
 	devType, err := device.GetDeviceType(path.
 		Join(ctx.String("data"), "device_type"))
 	if err != nil {
-		hostName, err := ioutil.ReadFile("/etc/hostname")
+		hostName, err := ioutil.ReadFile( conf.GetHostname() /* "/etc/hostname" */)
 		if err != nil {
 			return "unknown"
 		}
@@ -853,7 +853,7 @@ func (opts *setupOptionsType) maybeAddHostLookup() {
 	// should be a safe assumption.
 	route := fmt.Sprintf("%-15s %s s3.%s", opts.serverIP, host, host)
 
-	f, err := os.OpenFile("/etc/hosts", os.O_RDWR, 0644)
+	f, err := os.OpenFile(conf.GetHosts() /*"/etc/hosts"*/, os.O_RDWR, 0644)
 	if err != nil {
 		log.Warnf("Unable to open \"/etc/hosts\" for appending "+
 			"local route \"%s\": %s", route, err.Error())
