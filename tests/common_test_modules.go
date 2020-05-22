@@ -250,8 +250,10 @@ func makeTestArtifactScripts(t *testing.T,
 func UpdateModulesSetup(t *testing.T, attr *TestModuleAttr, tmpdir string) {
 	logPath := path.Join(tmpdir, "execution.log")
 
-	require.NoError(t, os.MkdirAll(path.Join(tmpdir, "var/lib/mender"), 0755))
-	require.NoError(t, os.MkdirAll(path.Join(tmpdir, "etc/mender"), 0755))
+	//require.NoError(t, os.MkdirAll(path.Join(tmpdir, "var/lib/mender"), 0755))
+	//require.NoError(t, os.MkdirAll(path.Join(tmpdir, "etc/mender"), 0755))
+	require.NoError(t, os.MkdirAll(path.Join(tmpdir, "data/ort/mender"), 0755))   //@@@@
+	
 
 	scripts := makeTestArtifactScripts(t, attr, tmpdir, logPath)
 

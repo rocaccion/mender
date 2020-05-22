@@ -153,7 +153,7 @@ func (rl *ReadLogger) Write(p []byte) (int, error) {
 
 func (mod *ModuleInstaller) payloadPath() string {
 	index := fmt.Sprintf("%04d", mod.payloadIndex)
-	return path.Join(mod.modulesWorkPath, "payloads", index, "tree")
+	return path.Join(mod.modulesWorkPath , "payloads", index, "tree")     // @@@@
 }
 
 type fileNameAndContent struct {
@@ -165,13 +165,13 @@ func (mod *ModuleInstaller) buildStreamsTree(artifactHeaders,
 	_ artifact.HeaderInfoer,
 	payloadHeaders handlers.ArtifactUpdateHeaders) error {
 
-	workPath := mod.payloadPath()
+	workPath :=  mod.payloadPath()    // "/data/ort/mender/payloads"  @@@@
 	err := os.RemoveAll(workPath)
 	if err != nil {
 		return err
 	}
 	for _, dir := range []string{"header", "tmp", "streams"} {
-		err = os.MkdirAll(path.Join(workPath, dir), 0700)
+		err = os.MkdirAll(path.Join( workPath , dir), 0700)  
 		if err != nil {
 			return err
 		}
@@ -640,16 +640,16 @@ func (d *moduleDownload) publishNameInStreamNext(name string) (*stream, error) {
 }
 
 func (d *moduleDownload) initializeMenderDownload() error {
-	err := os.RemoveAll(path.Join(d.payloadPath, "streams"))
+	err := os.RemoveAll(path.Join(d.payloadPath, "streams"))  //@@@@  "/data/ort/mender"
 	if err != nil {
 		return err
 	}
-	err = os.Remove(path.Join(d.payloadPath, "stream-next"))
+	err = os.Remove(path.Join(d.payloadPath, "stream-next"))  //@@@@  "/data/ort/mender"
 	if err != nil {
 		return err
 	}
 
-	err = os.Mkdir(path.Join(d.payloadPath, "files"), 0700)
+	err = os.Mkdir(path.Join(d.payloadPath, "files"), 0700)  //@@@@   "/data/ort/mender"
 	return err
 }
 
@@ -693,6 +693,7 @@ func (mod *ModuleInstaller) Initialize(artifactHeaders,
 func (mod *ModuleInstaller) PrepareStoreUpdate() error {
 	log.Debug("Executing ModuleInstaller.PrepareStoreUpdate")
 
+  //mod.programPath = "/system/bin/single-file"    //@@@@
 	payloadPath := mod.payloadPath()
 
 	log.Debugf("Calling module: %s Download %s", mod.programPath, payloadPath)

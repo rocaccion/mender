@@ -29,7 +29,7 @@ const (
 )
 
 const (
-    DemoServerCertificate = "/usr/share/doc/mender-client/examples/demo.crt"
+    DemoServerCertificate = "/data/ort/certs/mender-agent.pem" // @@@@ " usr/share/doc/mender-client/examples/demo.crt"
 )
 
 /*
@@ -40,8 +40,10 @@ const (
 
 var (
 	// needed so that we can override it when testing
-	DefaultPathDataDir = usr_share_mender
-	DefaultDataStore   = "/var/lib/mender"
+	DefaultPathDataDir = "/data/ort/mender"  //@@@@
+//	DefaultDataStore   = "/var/lib/mender"
+	DefaultDataStore   = "/data/ort/mender" // @@@@
+
 	DefaultKeyFile     = "mender-agent.pem"
 
 	DefaultConfFile         = path.Join(GetConfDirPath(), "mender.conf")
@@ -52,9 +54,9 @@ var (
 	// device specific paths
 	DefaultArtifactInfoFile  = path.Join(GetConfDirPath(), "artifact_info")
 	DefaultDeviceTypeFile    = path.Join(GetStateDirPath(), "device_type")
-	DefaultArtScriptsPath    = path.Join(GetStateDirPath(), "scripts")
-	DefaultRootfsScriptsPath = path.Join(GetConfDirPath(), "scripts")
-	DefaultModulesPath       = path.Join(GetDataDirPath(), "modules", "v3")
+	DefaultArtScriptsPath    = "/system/bin"  // path.Join(GetStateDirPath(), "scripts") @@@@
+	DefaultRootfsScriptsPath = path.Join(GetConfDirPath(), "scripts")  // @@@@
+	DefaultModulesPath       = "/system/bin" // path.Join(GetDataDirPath(), "modules", "v3")  @@@@
 	DefaultModulesWorkPath   = path.Join(GetStateDirPath(), "modules", "v3")
 )
 
@@ -67,7 +69,7 @@ func GetStateDirPath() string {
 }
 
 func GetConfDirPath() string {
-	return "/etc/mender"
+	return "/data/ort/mender"
 }
 
 func GetHostname() string {

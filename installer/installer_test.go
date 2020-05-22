@@ -40,14 +40,14 @@ func TestInstall(t *testing.T) {
 	assert.NotNil(t, art)
 
 	// image not compatible with device
-	_, err = Install(art, "fake-device", nil, "", &noUpdateProducers)
+	_, err = Install(art, "fake-device", nil, "/data/ort/mender/scripts", &noUpdateProducers)   //@@@@
 	assert.Error(t, err)
 	assert.Contains(t, errors.Cause(err).Error(),
 		"not compatible with device fake-device")
 
 	art, err = MakeRootfsImageArtifact(2, false, false)
 	assert.NoError(t, err)
-	_, err = Install(art, "vexpress-qemu", nil, "", &updateProducers)
+	_, err = Install(art, "vexpress-qemu", nil, "/data/ort/mender/scripts", &updateProducers)   //@@@@
 	assert.NoError(t, err)
 }
 
@@ -63,13 +63,13 @@ func TestInstallSigned(t *testing.T) {
 	// no key for verifying artifact
 	art, err = MakeRootfsImageArtifact(2, true, false)
 	assert.NoError(t, err)
-	_, err = Install(art, "vexpress-qemu", nil, "", &updateProducers)
+	_, err = Install(art, "vexpress-qemu", nil, "/data/ort/mender/scripts", &updateProducers)   //@@@@
 	assert.NoError(t, err)
 
 	// image not compatible with device
 	art, err = MakeRootfsImageArtifact(2, true, false)
 	assert.NoError(t, err)
-	_, err = Install(art, "fake-device", []byte(PublicRSAKey), "", &updateProducers)
+	_, err = Install(art, "fake-device", []byte(PublicRSAKey), "/data/ort/mender/scripts", &updateProducers)    //@@@@
 	assert.Error(t, err)
 	assert.Contains(t, errors.Cause(err).Error(),
 		"not compatible with device fake-device")
@@ -77,7 +77,7 @@ func TestInstallSigned(t *testing.T) {
 	// installation successful
 	art, err = MakeRootfsImageArtifact(2, true, false)
 	assert.NoError(t, err)
-	_, err = Install(art, "vexpress-qemu", []byte(PublicRSAKey), "", &updateProducers)
+	_, err = Install(art, "vexpress-qemu", []byte(PublicRSAKey), "/data/ort/mender/scripts", &updateProducers)    //@@@@
 	assert.NoError(t, err)
 
 }
@@ -92,7 +92,7 @@ func TestInstallNoSignature(t *testing.T) {
 	assert.NotNil(t, art)
 
 	// image does not contain signature
-	_, err = Install(art, "vexpress-qemu", []byte(PublicRSAKey), "", &updateProducers)
+	_, err = Install(art, "vexpress-qemu", []byte(PublicRSAKey), "/data/ort/mender/scripts", &updateProducers)    //@@@@
 	assert.Error(t, err)
 	assert.Contains(t, errors.Cause(err).Error(),
 		"expecting signed artifact, but no signature file found")
@@ -107,7 +107,7 @@ func TestInstallWithScripts(t *testing.T) {
 	assert.NoError(t, err)
 	assert.NotNil(t, art)
 
-	scrDir, err := ioutil.TempDir("", "test_scripts")
+	scrDir, err := ioutil.TempDir("/data/ort/mender", "test_scripts")     //@@@@
 	assert.NoError(t, err)
 	defer os.RemoveAll(scrDir)
 
@@ -124,7 +124,7 @@ func TestCorrectUpdateProducerReturned(t *testing.T) {
 	assert.NoError(t, err)
 	assert.NotNil(t, art)
 
-	returned, err := Install(art, "vexpress-qemu", nil, "", &updateProducers)
+	returned, err := Install(art, "vexpress-qemu", nil, "/data/ort/mender", &updateProducers)   //@@@@
 	assert.NoError(t, err)
 
 	assert.Equal(t, 1, len(returned))
@@ -139,7 +139,7 @@ func TestMultiplePayloadsRejected(t *testing.T) {
 	art, err := MakeDoubleRootfsImageArtifact(3)
 	require.NoError(t, err)
 
-	_, err = Install(art, "vexpress-qemu", nil, "", &updateProducers)
+	_, err = Install(art, "vexpress-qemu", nil, "/data/ort/mender", &updateProducers)   //@@@@
 	assert.Error(t, err)
 	assert.Contains(t, err.Error(), "Artifacts with more than one payload are not supported yet")
 }

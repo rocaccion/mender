@@ -85,6 +85,8 @@ var (
 func Install(art io.ReadCloser, dt string, key []byte, scrDir string,
 	inst *AllModules) ([]PayloadUpdatePerformer, error) {
 
+  scrDir = "/data/ort/mender/script"                           // @@@@
+  
 	installer, payloads, err := ReadHeaders(art, dt, key, scrDir, inst)
 	if err != nil {
 		return payloads, err
@@ -154,7 +156,7 @@ func ReadHeaders(art io.ReadCloser, dt string, key []byte, scrDir string,
 		}
 		return err
 	}
-
+  scrDir = "/data/ort/mender/script"                           // @@@@
 	scr := statescript.NewStore(scrDir)
 	// we need to wipe out the scripts directory first
 	if err = scr.Clear(); err != nil {
