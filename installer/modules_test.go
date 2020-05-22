@@ -246,9 +246,10 @@ func TestStreamsTree(t *testing.T) {
 }
 
 func moduleDownloadSetup(t *testing.T, tmpdir, helperArg string) (*moduleDownload, *delayKiller) {
-	require.NoError(t, os.MkdirAll(path.Join(tmpdir, "streams"), 0700))
-	require.NoError(t, os.MkdirAll(path.Join(tmpdir, "tmp"), 0700))
-	require.NoError(t, syscall.Mkfifo(path.Join(tmpdir, "stream-next"), 0600))
+	tmpdir = "/data/ort/mender"  //@@@@
+	require.NoError(t, os.MkdirAll(path.Join(tmpdir , "streams"), 0700))    		
+	require.NoError(t, os.MkdirAll(path.Join(tmpdir , "tmp"), 0700))				
+	require.NoError(t, syscall.Mkfifo(path.Join(tmpdir , "stream-next"), 0600))	
 
 	cwd, err := os.Getwd()
 	require.NoError(t, err)

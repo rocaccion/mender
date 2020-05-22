@@ -1,0 +1,170 @@
+liblzma_la-tuklib_cpucores.lo: ../common/tuklib_cpucores.c \
+  ../../src/common/tuklib_cpucores.h ../../src/common/tuklib_common.h \
+  ../../src/common/tuklib_config.h ../../src/common/sysdefs.h \
+  ../../config.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stddef.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/__stddef_max_align_t.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/local/include/inttypes.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/inttypes.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/inttypes.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stdint.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/stdint.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/wchar_limits.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/sys/cdefs.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/versioning.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/api-level.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/ndk-version.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/limits.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/limits.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/float.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/limits.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/posix_limits.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/local/include/stdlib.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/stdlib.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/alloca.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/wait.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/wait.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/malloc.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/stdio.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/sys/types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/aarch64-linux-android/asm/types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/int-ll64.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/aarch64-linux-android/asm/bitsperlong.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/bitsperlong.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/posix_types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/stddef.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/compiler_types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/compiler.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/aarch64-linux-android/asm/posix_types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/posix_types.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/pthread_types.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stdarg.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/seek_constants.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/xlocale.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/legacy_stdlib_inlines.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/assert.h \
+  /home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stdbool.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/string.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/strcasecmp.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/strings.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/legacy_strings_inlines.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/memory.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/sched.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/timespec.h \
+  /home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/sched.h
+
+../../src/common/tuklib_cpucores.h:
+
+../../src/common/tuklib_common.h:
+
+../../src/common/tuklib_config.h:
+
+../../src/common/sysdefs.h:
+
+../../config.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stddef.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/__stddef_max_align_t.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/local/include/inttypes.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/inttypes.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/inttypes.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stdint.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/stdint.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/wchar_limits.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/sys/cdefs.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/versioning.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/api-level.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/ndk-version.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/limits.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/limits.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/float.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/limits.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/posix_limits.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/local/include/stdlib.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/stdlib.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/alloca.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/wait.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/wait.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/malloc.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/stdio.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/sys/types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/aarch64-linux-android/asm/types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/int-ll64.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/aarch64-linux-android/asm/bitsperlong.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/bitsperlong.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/posix_types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/stddef.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/compiler_types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/compiler.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/aarch64-linux-android/asm/posix_types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/asm-generic/posix_types.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/pthread_types.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stdarg.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/seek_constants.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/xlocale.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/legacy_stdlib_inlines.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/assert.h:
+
+/home/gerardo/ndk-dir/lib64/clang/9.0.8/include/stdbool.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/string.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/strcasecmp.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/strings.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/android/legacy_strings_inlines.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/memory.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/sched.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/bits/timespec.h:
+
+/home/gerardo/ndk-dir/bin/../sysroot/usr/include/linux/sched.h:

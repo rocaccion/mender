@@ -17,7 +17,7 @@ import (
 	"encoding/json"
 	"path"
 
-	"github.com/mendersoftware/mender/conf"
+//	"github.com/mendersoftware/mender/conf"   //@@@@
 	"github.com/mendersoftware/mender/system"
 	"github.com/mendersoftware/mender/utils"
 	"github.com/pkg/errors"
@@ -25,8 +25,9 @@ import (
 
 var (
 	IdentityDataHelper = path.Join(
-		conf.GetDataDirPath(),
-		"identity",
+//            	conf.GetDataDirPath(),
+//		"identity",               //@@@@
+                "/system/bin",
 		"mender-device-identity",
 	)
 )
