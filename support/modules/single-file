@@ -13,7 +13,7 @@ permissions_file="$FILES"/files/permissions
 case "$STATE" in
 
     NeedsArtifactReboot)
-        echo "No"
+        echo "Yes"
     ;;
 
     SupportsRollback)
@@ -55,6 +55,11 @@ case "$STATE" in
         rm ${dest_dir}/${filename}
         cp -a $tmp_dest_dir/$filename ${dest_dir}/${filename}
         ;;
+
+    ArtifactReboot)
+      /system/bin/otaupdater
+      ;;
+
 esac
 
 exit 0
